@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Public Sans', sans-serif;
+    font-family: 'Gelasio', serif;
+}
+
+/**** Header ****/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(130, 18, 11);
+    height: 120px;
+    border-bottom: solid 10px rgb(144, 170, 169);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    /**** z-index bestimmt die Ebene --> wenn sticky; top: 0; macht es Ebene eins, darum 100 ****/
+}
+
+header img {
+    height: 90px;
+    margin: 15px;
+}
+
+.hamburger {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0 0 15px;
+    border-radius: 500px;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.change .ham {
+    left: 0px;
+    opacity: 100;
+}
+
+.ham {
+    background-color: rgb(144, 170, 169);
+    height: 250px;
+    width: 250px;
+    position: fixed;
+    position: absolute;
+    left: -250px;
+    transition: 0.8s;
+    top: 120px;
+    opacity: 0;
+}
+
+.ham ul {
+    list-style-type: none;
+    margin: 0 0 0 25px;
+}
+
+.ham ul li {
+    margin: 22px 0;
+}
+
+.ham a {
+    color: black;
+    text-decoration: none;
+}
+
+.ham a:hover {
+    color: rgb(130, 18, 11);
+    font-weight: 600;
+}
+
+.ham .active {
+    font-weight: 600;
+}
+
+/**** Main ****/
+
+main {
+    margin: 80px 320px;
+}
+
+h1 {
+    font-size: 2.3em;
+    font-family: 'Public Sans', sans-serif;
+    font-weight: bold;
+    color: rgb(130, 18, 11);
+}
+
+.vorschau_bild {
+    height: 240px;
+    width: 240px;
+    border: 2px solid black;
+    border-radius: 120px;
+    margin-bottom: 30px;
+    transform: scale(1.0);
+    transition: 0.3s;
+    filter: grayscale(100%);
+}
+
+.vorschau_bild:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    filter: grayscale(0%);
+}
+
+main section {
+    margin: 80px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.problem {
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+h3 {
+    width: 245px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+main article {
+    margin: 0 80px 80px 80px;
+    max-width: 240px;
+    font-family: 'Gelasio', serif;
+}
+
+/**** Footer ****/

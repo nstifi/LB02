@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Public Sans', sans-serif;
+    font-family: 'Gelasio', serif;
+}
+
+/**** Header ****/
+
+header {
+    background-color: rgb(130, 18, 11);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 480px;
+    border-bottom: solid 10px rgb(144, 170, 169);
+}
+
+header p {
+    display: flex;
+    padding-top: 20px;
+    font-family: 'Public Sans', sans-serif;
+    color: white;
+    font-size: 36px;
+    justify-content: center;
+}
+
+/**** Main ****/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main nav ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 30px;
+}
+
+nav li {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(130, 18, 11);
+    border-radius: 200px;
+    margin: 30px 80px;
+    filter: grayscale(100%);
+}
+
+nav li:hover {
+    filter: grayscale(0%);
+}
+
+nav li a {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Public Sans', sans-serif;
+}
+
+/**** Footer ****/
+
+footer {
+    margin-top: 90px;
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Public Sans', sans-serif;
+}
