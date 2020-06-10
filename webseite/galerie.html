@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Made with ♥</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="css/light.css"
+    media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+  <meta charset="utf-8">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script type="text/javascript">
+    if (screen.width <= 699) {
+      document.location = "./mobile.html"
+    }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo"><a href="index.html"> <img src="assets/logo_dope.png" alt="Logo"> </a></div>
+    <nav class="nav-main">
+      <ul>
+        <li><a href="produkte.html">Produkte</a></li>
+        <li><a class="active" href="galerie.html">Galerie</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="intro">
+      <h1>Galerie</h1>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+    </section>
+
+    <section>
+      <!-- Container for the image gallery Code: w3schools.com-->
+      <article class="container">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="mySlides">
+          <img src="https://www.w3schools.com/howto/img_woods_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="https://www.w3schools.com/howto/img_5terre_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" style="width:100%">
+        </div>
+        <div class="mySlides">
+          <img src="https://www.w3schools.com/howto/img_lights_wide.jpg" style="width:100%">
+        </div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </article>
+    </section>
+
+  </main>
+
+  <footer>
+    <a href="http://instagram.com" target="_blank"> <i class="fab fa-instagram-square"></i> </a>
+    <a href="http://facebook.com" target="_blank"> <i class="fab fa-facebook-square"></i> </a>
+    <a href="http://twitter.com" target="_blank"> <i class="fab fa-twitter-square"></i> </a>
+  </footer>
+
+
+
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
+
+</body>
+
+</html>
